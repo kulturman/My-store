@@ -11,8 +11,8 @@ import { ProductDescriptionComponent } from './product-description/product-descr
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     FooterComponent,
+    HomeComponent,
     HeaderComponent,
     ProductDescriptionComponent
   ],
