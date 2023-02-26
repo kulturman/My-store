@@ -1,0 +1,35 @@
+<main class="limitedWidthBlockContainer">
+    <div class="limitedWidthBlock">
+        <section class="item" *ngIf="product">
+          <article>
+            <div class="item__img">
+                <img src="{{product.url}}" alt="Photo">
+            </div>
+            <div class="item__content">
+
+              <div class="item__content__titlePrice">
+                <h1 id="title">{{product.name}}</h1>
+                <p>Price : <span id="price">{{product.price}}</span>$</p>
+              </div>
+
+              <div class="item__content__description">
+                <p class="item__content__description__title">Description :</p>
+                <p id="description">{{product.description}}</p>
+              </div>
+
+              <div class="item__content__settings">
+                <div class="item__content__settings__quantity">
+                  <label for="itemQuantity">Quantity :</label>
+                  <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity">
+                </div>
+              </div>
+
+              <div class="item__content__addButton">
+                <button id="addToCart">Add to cart</button>
+              </div>
+
+            </div>
+          </article>
+        </section>
+      </div>
+</main>

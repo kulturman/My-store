@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { ProductDescriptionComponent } from './product-description/product-descr
     FooterComponent,
     HomeComponent,
     HeaderComponent,
-    ProductDescriptionComponent
+    ProductDescriptionComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

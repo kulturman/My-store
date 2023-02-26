@@ -4,15 +4,9 @@
         <h1>Products</h1>
       </div>
       <section class="items" id="items"> 
-        <a href="./product.html?id=42">
-          <app-product-description></app-product-description>
+        <a routerLink="/products/{{product.id}}" *ngFor="let product of products">
+          <app-product-description [product]="product"></app-product-description>
         </a>
-        <a href="./product.html?id=42">
-            <app-product-description></app-product-description>
-          </a>
-          <a href="./product.html?id=42">
-            <app-product-description></app-product-description>
-          </a>
       </section>
     </div>
 </main>
