@@ -1,6 +1,10 @@
 # MyStore
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+Here are the key features:
+- List of all products
+- View a specific produc, add it to cart
+- Complete order
 
 ## Development server
 
