@@ -1,9 +1,9 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { map, Observable } from "rxjs";
-import { CartItem } from "./cartItem.model";
-import { Product } from "./product.model";
+import { map } from "rxjs";
+import { CartItem } from "./models/cartItem.model";
+import { Product } from "./models/product.model";
 
 @Injectable({
     providedIn: 'root'

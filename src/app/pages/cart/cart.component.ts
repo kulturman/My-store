@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { CartService } from 'src/app/services/cart.sevice';
-import { CartItem } from 'src/app/services/cartItem.model';
+import { CartItem } from 'src/app/services/models/cartItem.model';
 
 @Component({
   selector: 'app-cart',
