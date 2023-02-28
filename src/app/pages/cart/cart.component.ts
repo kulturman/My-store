@@ -28,8 +28,12 @@ export class CartComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  completeOrder($event: Event) {
-    console.log(this.fullName, this.creditCard, this.address);
+  completeOrder() {
+    this.cartService.completeOrder({
+      address: this.address,
+      creditCard: this.creditCard,
+      fullName: this.fullName
+    });
   }
 
 }

@@ -11,6 +11,7 @@ import { ProductDescriptionComponent } from './product-description/product-descr
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './pages/cart/cart.component';
+import { OrderCompleteComponent } from './pages/order-complete/order-complete.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,12 @@ import { CartComponent } from './pages/cart/cart.component';
     HeaderComponent,
     ProductDescriptionComponent,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
+    OrderCompleteComponent
   ],
   imports: [
-    BrowserModule,
     FormsModule,
+    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],

@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 import { map, Observable } from "rxjs";
 import { CartItem } from "./cartItem.model";
 import { Product } from "./product.model";
@@ -11,7 +12,7 @@ export class CartService {
     private CART_KEY = 'cart';
     private fileUrl: string = './assets/data.json';
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private router: Router) {}
 
     getCart() {
         const cartItemsMap = this.getCartItemsAsMap();
@@ -35,6 +36,11 @@ export class CartService {
                 return { totalPrice, cartItems };
             })
         );
+    }
+
+    completeOrder(orderData: { fullName: string, address: string, creditCard: string }) {
+        localStorage.removeItem(this.CART_KEY);
+        this.router.navigate(['/order/complete'], { state: orderData });
     }
 
     private getCartItemsAsMap() {

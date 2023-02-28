@@ -26,21 +26,24 @@
             <p>Total: <span id="totalPrice">{{totalPrice}}</span> USD</p>
           </div>
           <div class="cart__order">
-            <form (ngSubmit)="completeOrder($event)" class="cart__order__form">
+            <form #form="ngForm" (ngSubmit)="completeOrder()" class="cart__order__form">
               <div class="cart__order__form__question">
                 <label for="fullname">Fullname: </label>
-                <input type="text" name="fullname" id="fullname" required [(ngModel)]="fullName">
+                <input #fullNameField="ngModel" type="text" name="fullname" id="fullname" required [(ngModel)]="fullName">
+                <p *ngIf="fullNameField.invalid" id="errorMsg">This field is required</p>
               </div>
               <div class="cart__order__form__question">
                 <label for="address">Address: </label>
-                <input type="text" name="address" id="address" required [(ngModel)]="address">
+                <input #addressField="ngModel"type="text" name="address" id="address" required [(ngModel)]="address">
+                <p *ngIf="addressField.invalid" id="errorMsg">This field is required</p>
               </div>
               <div class="cart__order__form__question">
                 <label for="creditCard">Credit card number: </label>
-                <input type="email" name="creditCard" id="creditCard" required [(ngModel)]="creditCard">
+                <input #creditCardField="ngModel" type="email" name="creditCard" id="creditCard" required [(ngModel)]="creditCard">
+                <p *ngIf="creditCardField.invalid" id="errorMsg">This field is required</p>
               </div>
               <div class="cart__order__form__submit">
-                <input type="submit" value="Order !" id="order">
+                <input type="submit" value="Order !" id="order" [disabled]="form.invalid">
               </div>
             </form>
           </div>
