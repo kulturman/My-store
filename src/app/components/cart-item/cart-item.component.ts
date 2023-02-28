@@ -16,7 +16,7 @@ export class CartItemComponent {
     this.updateItem.emit(this.cartItem);
   }
 
-  deleteCartItem($event: Event) {console.log('yyy')
+  deleteCartItem($event: Event) {
     this.deleteItem.emit(this.cartItem);
   }
 }

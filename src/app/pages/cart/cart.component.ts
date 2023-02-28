@@ -46,5 +46,6 @@ export class CartComponent implements OnInit, OnDestroy {
     let index = this.cartItems.findIndex(item => item.id === cartItem.id);
     this.cartItems.splice(index, 1);
     this.cartService.deleteItem(cartItem);
+    this.totalPrice = parseFloat(this.cartService.computePrice().toString()).toFixed(2);
   }
 }
