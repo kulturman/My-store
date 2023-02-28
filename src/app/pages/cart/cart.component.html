@@ -14,18 +14,18 @@
             <form #form="ngForm" (ngSubmit)="completeOrder()" class="cart__order__form">
               <div class="cart__order__form__question">
                 <label for="fullname">Fullname: </label>
-                <input #fullNameField="ngModel" type="text" name="fullname" id="fullname" required [(ngModel)]="fullName">
-                <p *ngIf="fullNameField.invalid" id="errorMsg">This field is required</p>
+                <input pattern="[a-zA-Z ]*" #fullNameField="ngModel" type="text" name="fullname" id="fullname" required [(ngModel)]="fullName">
+                <p *ngIf="fullNameField.invalid" id="errorMsg">This field is invalid (only letters and spaces)</p>
               </div>
               <div class="cart__order__form__question">
                 <label for="address">Address: </label>
-                <input #addressField="ngModel"type="text" name="address" id="address" required [(ngModel)]="address">
-                <p *ngIf="addressField.invalid" id="errorMsg">This field is required</p>
+                <input pattern="[a-zA-Z ]*" #addressField="ngModel"type="text" name="address" id="address" required [(ngModel)]="address">
+                <p *ngIf="addressField.invalid" id="errorMsg">This field is invalid (only letters and spaces)</p>
               </div>
               <div class="cart__order__form__question">
                 <label for="creditCard">Credit card number: </label>
-                <input #creditCardField="ngModel" type="email" name="creditCard" id="creditCard" required [(ngModel)]="creditCard">
-                <p *ngIf="creditCardField.invalid" id="errorMsg">This field is required</p>
+                <input pattern="[0-9]*" #creditCardField="ngModel" type="email" name="creditCard" id="creditCard" required [(ngModel)]="creditCard">
+                <p *ngIf="creditCardField.invalid" id="errorMsg">This field is invalid (type only numbers)</p>
               </div>
               <div class="cart__order__form__submit">
                 <input type="submit" value="Order !" id="order" [disabled]="form.invalid">

@@ -13,7 +13,7 @@ export class OrderCompleteComponent {
   public creditCard!: string;
 
   constructor(private router: Router) {
-    const state = this.router.getCurrentNavigation()?.extras.state;console.log(state)
+    const state = this.router.getCurrentNavigation()?.extras.state;
     
     if (!state) {
       this.router.navigate(['']);
