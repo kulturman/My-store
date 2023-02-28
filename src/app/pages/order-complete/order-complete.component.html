@@ -1,7 +1,13 @@
 <main class="limitedWidthBlockContainer">
     <div class="limitedWidthBlock" id="limitedWidthBlock">
       <div class="confirmation">
-        <p>Order has been validated ! Thank you {{fullName}}</p>
+        <ul>
+          <li class="success">Order has been validated !</li>
+          <li>fullName: {{fullName}}</li>
+          <li>Total order: {{totalCost}} USD</li>
+          <li>Shipping address: {{address}}</li>
+          <li>CreditCard: Hidden for security reason</li>
+        </ul>
       </div>
     </div>
 </main>

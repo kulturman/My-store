@@ -15,7 +15,7 @@ export class CartComponent implements OnInit, OnDestroy {
   public fullName: string = '';
   public address: string = '';
   public creditCard: string = '';
-  public totalPrice: string = 's';
+  public totalPrice: string = '';
   
   ngOnInit(): void {
     this.subscription = this.cartService.getCart().subscribe(cart => {
@@ -32,8 +32,19 @@ export class CartComponent implements OnInit, OnDestroy {
     this.cartService.completeOrder({
       address: this.address,
       creditCard: this.creditCard,
-      fullName: this.fullName
+      fullName: this.fullName,
+      totalCost: this.cartService.computePrice()
     });
   }
 
+  updateCartItem(cartItem: CartItem) {
+    this.cartService.updateItem(cartItem);
+    this.totalPrice = parseFloat(this.cartService.computePrice().toString()).toFixed(2);
+  }
+
+  deleteCartItem(cartItem: CartItem) {
+    let index = this.cartItems.findIndex(item => item.id === cartItem.id);
+    this.cartItems.splice(index, 1);
+    this.cartService.deleteItem(cartItem);
+  }
 }

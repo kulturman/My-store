@@ -4,7 +4,7 @@
         <h1>Cart</h1>
         <section class="cart" *ngIf="cartItems && cartItems.length > 0">
           <section id="cart__items">
-            <app-cart-item class="cart__item" *ngFor="let cartItem of cartItems" [cartItem]="cartItem">
+            <app-cart-item (deleteItem)="deleteCartItem(cartItem)" (updateItem)="updateCartItem(cartItem)" class="cart__item" *ngFor="let cartItem of cartItems" [cartItem]="cartItem">
             </app-cart-item>
           </section>
           <div class="cart__price">

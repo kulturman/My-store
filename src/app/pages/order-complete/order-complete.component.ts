@@ -8,16 +8,22 @@ import { Router } from '@angular/router';
 })
 export class OrderCompleteComponent {
   public fullName!: string;
+  public totalCost!: string;
+  public address!: string;
+  public creditCard!: string;
 
   constructor(private router: Router) {
-    const state = this.router.getCurrentNavigation()?.extras.state;
+    const state = this.router.getCurrentNavigation()?.extras.state;console.log(state)
     
     if (!state) {
       this.router.navigate(['']);
     }
     
-    if (state && state['fullName']) {
+    if (state) {
       this.fullName = state['fullName'];
+      this.totalCost = parseFloat(state['totalCost'].toString()).toFixed(2);
+      this.address = state['address'];
+      this.creditCard = state['creditCard'];
     }
   }
 }
