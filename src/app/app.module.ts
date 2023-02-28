@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './pages/cart/cart.component';

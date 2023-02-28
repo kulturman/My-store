@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Product } from '../services/models/product.model';
+import { Product } from '../../services/models/product.model';
 
 @Component({
   selector: 'app-product-description',
