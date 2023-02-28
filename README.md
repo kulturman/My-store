@@ -1,9 +1,10 @@
 # MyStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+My store is an ecommerce application built with angular, you can:
 Here are the key features:
 - List of all products
-- View a specific produc, add it to cart
+- View a specific produc
+- Manage your cart (Add items, remove and update quantity)
 - Complete order
 
 ## Development server

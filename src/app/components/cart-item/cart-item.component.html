@@ -1,0 +1,20 @@
+<article class="cart__item">
+    <div class="cart__item__img">
+        <img src="{{cartItem.url}}" alt="Product image">
+    </div>
+    <div class="cart__item__content">
+        <div class="cart__item__content__description">
+            <h2>{{cartItem.name}}</h2>
+            <p>{{cartItem.price}} USD</p>
+        </div>
+        <div class="cart__item__content__settings">
+            <div class="cart__item__content__settings__quantity">
+                <p>Qty : </p>
+                <input type="number" class="itemQuantity" name="itemQuantity" min="1" max="100" value="{{cartItem.quantity}}">
+            </div>
+            <div class="cart__item__content__settings__delete">
+                <p class="deleteItem">Delete</p>
+            </div>
+        </div>
+    </div>
+</article>
