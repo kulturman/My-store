@@ -3,7 +3,7 @@
 My store is an ecommerce application built with angular, you can:
 Here are the key features:
 - List of all products
-- View a specific produc
+- View a specific product
 - Manage your cart (Add items, remove and update quantity)
 - Complete order
 
