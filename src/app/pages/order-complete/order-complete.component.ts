@@ -15,15 +15,14 @@ export class OrderCompleteComponent {
   constructor(private router: Router) {
     const state = this.router.getCurrentNavigation()?.extras.state;
     
-    if (!state) {
-      this.router.navigate(['']);
-    }
-    
     if (state) {
       this.fullName = state['fullName'];
       this.totalCost = parseFloat(state['totalCost'].toString()).toFixed(2);
       this.address = state['address'];
       this.creditCard = state['creditCard'];
+    }
+    else {
+      this.router.navigate(['']);
     }
   }
 }
